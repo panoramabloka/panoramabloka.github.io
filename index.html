@@ -55,8 +55,12 @@
 	<script>
     function onSubmit() {
 	    console.log("success");
-        var x = document.getElementById('username').value + document.getElementById('password').value
-        alert(x);
+	    var x = document.getElementById("username").value;	    
+	    var y = google.script.run.login(input);        
+	    console.log(x);
+	    console.log(y);	    
+	    // var x = document.getElementById('username').value + document.getElementById('password').value
+        // alert(x);
       // var input = document.getElementById("userInput").value;
       // google.script.run.logPassword(input);
     }
