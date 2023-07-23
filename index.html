@@ -30,7 +30,7 @@
 			margin-bottom: 20px;
 			box-sizing: border-box;
 		}
-		input[type="submit"] {
+		#submit {
 			background-color: #ACCE20;
 			color: #FFFFFF;
 			padding: 10px 20px;
@@ -49,12 +49,14 @@
 		<input type="text" id="username" name="username">
 		<label for="password">Password:</label>
 		<input type="password" id="password" name="password">
-		<input type="submit" value="Submit">
+        <button id="submit" onclick="onSubmit()">Click Me</button>
 	</form>
-	<button onclick="onSubmit()">Click Me</button>
+	
 	<script>
     function onSubmit() {
 	    console.log("success");
+        var x = document.getElementById('username').value
+        alert(x);
       // var input = document.getElementById("userInput").value;
       // google.script.run.logPassword(input);
     }
