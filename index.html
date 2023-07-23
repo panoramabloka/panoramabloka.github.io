@@ -7,7 +7,7 @@
 		body {
 			background-color: #ACCE20;
 		}
-		form {
+		#form {
 			background-color: #FFFFFF;
 			padding: 20px;
 			border-radius: 10px;
@@ -44,18 +44,18 @@
 	</style>
 </head>
 <body>
-	<form>
+	<div id="form">
 		<label for="username">Username:</label>
 		<input type="text" id="username" name="username">
 		<label for="password">Password:</label>
 		<input type="password" id="password" name="password">
         <button id="submit" onclick="onSubmit()">Click Me</button>
-	</form>
+	</div>
 	
 	<script>
     function onSubmit() {
 	    console.log("success");
-        var x = document.getElementById('username').value
+        var x = document.getElementById('username').value + document.getElementById('password').value
         alert(x);
       // var input = document.getElementById("userInput").value;
       // google.script.run.logPassword(input);
